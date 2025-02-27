@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.env
+*.venv
+
+# Django specific files
+db.sqlite3
+*.sqlite3
+media/
+staticfiles/
+*.log
+
+# Ignore local settings
+/local_settings.py
+/local_settings/
+
+# Cache files
+*.cache
+*.mo
+*.pot
+*.pyc
+*.pyo
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System-specific
+.DS_Store
+Thumbs.db
+
+# Pip and package management
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Migrations (optional, if you want to ignore auto-generated migrations)
+# **/migrations/*.py
+# !**/migrations/__init__.py
+
+# Compiled C extensions
+*.so
+
+# Logs and debugging files
+logs/
+*.log
+debug.log
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+.cache
+nosetests.xml
+coverage.xml
+*.lcov
+
+# MyPy
+.mypy_cache/
+dmypy.json
+dmypy.log
+
+# Security
+secrets.json
+
+# Others
+
+0_run_at_port_2446_only/

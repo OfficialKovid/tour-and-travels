@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Successful</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-lg text-center">
+            <div class="mb-8">
+                <svg class="mx-auto h-16 w-16 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Booking Successful!</h2>
+            <p class="text-gray-600 mb-8">Your booking for {{ booking.package.title }} has been confirmed.</p>
+            
+            <div class="bg-gray-50 p-4 rounded-lg mb-8">
+                <p class="text-gray-700"><strong>Booking ID:</strong> {{ booking.id }}</p>
+                <p class="text-gray-700"><strong>Amount Paid:</strong> Rs.{{ booking.total_price }}</p>
+                <p class="text-gray-700"><strong>Date:</strong> {{ booking.booking_date }}</p>
+            </div>
+
+            <div class="space-y-4">
+                <a href="{% url 'my_bookings' %}" 
+                   class="block w-full bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                    View My Bookings
+                </a>
+                <a href="{% url 'home' %}" 
+                   class="block w-full bg-gray-100 text-gray-700 py-3 px-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                    Return to Home
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Fire confetti when page loads
+        window.onload = function() {
+            // First burst
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+            // Multiple bursts with different colors
+            var count = 200;
+            var defaults = {
+                origin: { y: 0.7 }
+            };
+
+            function fire(particleRatio, opts) {
+                confetti(Object.assign({}, defaults, opts, {
+                    particleCount: Math.floor(count * particleRatio)
+                }));
+            }
+
+            fire(0.25, {
+                spread: 26,
+                startVelocity: 55,
+                colors: ['#ff0000', '#ff7700']
+            });
+
+            fire(0.2, {
+                spread: 60,
+                colors: ['#00ff00', '#0000ff']
+            });
+
+            fire(0.35, {
+                spread: 100,
+                decay: 0.91,
+                scalar: 0.8,
+                colors: ['#FFD700', '#FFA500']
+            });
+
+            fire(0.1, {
+                spread: 120,
+                startVelocity: 25,
+                decay: 0.92,
+                scalar: 1.2,
+                colors: ['#ff0000', '#00ff00', '#0000ff']
+            });
+
+            // Cannon fire effect
+            setTimeout(function() {
+                confetti({
+                    particleCount: 450,
+                    angle: 60,
+                    spread: 60,
+                    origin: { x: 0 },
+                    colors: ['#ff0000', '#00ff00', '#0000ff']
+                });
+                confetti({
+                    particleCount: 450,
+                    angle: 120,
+                    spread: 60,
+                    origin: { x: 1 },
+                    colors: ['#FFD700', '#FFA500', '#ff69b4']
+                });
+            }, 500);
+        }
+    </script>
+</body>
+</html>

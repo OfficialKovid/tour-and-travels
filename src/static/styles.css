@@ -1,0 +1,175 @@
+.landing-section{
+    height: 41rem;
+    background-image: url(./img/bcimg1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.landing-info{
+    /* background-color: red; */
+    margin-left: 5rem;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    color: white;
+
+}
+.landing-info>span{
+    font-family: "Open Sans", sans-serif;
+    font-size: small;
+}
+.landing-info>h1,.landing-info>h2{
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.landing-info>p{
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+.landing-info>.button{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 2px;
+    color: black;
+    height: 42px;
+    width: 140px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+}
+body{
+        font-family: "Marcellus", serif;
+        font-weight: 400;
+        font-style: normal;
+
+      
+}
+
+/* NEW COLLECTION */
+.newcol{
+    display: flex;
+    /* height: 45rem; */
+}
+.newcolitem{
+    height: 35rem;
+    /* background-image: url(./img/.jpg); */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 49%;
+    
+}
+.newcalinfo{
+    max-width: 15rem;
+    gap: .6rem;
+}
+.newcalinfo>h2{
+    font-size: 2.5rem;
+}
+.newcalinfo>p{
+    font-size: 1.35rem;
+}
+/* nav bar  */
+
+/* nav bar  */
+.container-custom{
+    display: flex;
+    align-items: center;
+    max-height: 35px
+}
+
+/* Style for header */
+.header {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for logo */
+.logo img {
+    width: 6.5rem; /* Adjust size as needed */
+    height: auto;
+    margin-left: 10px;
+}
+
+/* Style for navigation links */
+.nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #555;
+}
+
+/* Style for account and cart links */
+.navright a {
+    color: #333;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.navright a:hover {
+    color: #555;
+}
+.navright{
+    display: flex;
+}
+
+/* Style for account and cart icons */
+.account-icon,
+.cart-icon {
+    fill: #333;
+    width: 20px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Style for responsive layout */
+@media (max-width: 768px) {
+    .container-custom{
+        justify-content: space-between;
+    }
+    .nav {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav a {
+        /* display: block; */
+        margin-bottom: 10px;
+    }
+    .nav>.hidden-link{
+        display: none;
+    }
+
+
+    .navright a {
+        margin-right: 10px;
+    }
+}
+@media (max-width: 550px) {
+    nav{
+        display: none;
+    }
+
+}
