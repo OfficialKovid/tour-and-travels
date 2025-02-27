@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-from travelpackages.models import TravelPackage
+from apps.travelpackages.models import TravelPackage
 
 class Booking(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

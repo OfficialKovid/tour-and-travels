@@ -22,10 +22,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('secureadmin/', admin.site.urls),
-    path('', include("home.urls")),
-    path('', include("booking.urls")),
-    path('', include("accounts.urls")),
-    path('', include("contact.urls")),
-    path('', include("travelpackages.urls")),
+    path('', include("apps.home.urls")),
+    path('', include("apps.booking.urls")),
+    path('', include("apps.accounts.urls")),
+    path('', include("apps.contact.urls")),
+    path('', include("apps.travelpackages.urls")),
      # Make sure this line is before the static patterns
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

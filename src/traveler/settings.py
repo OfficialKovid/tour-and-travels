@@ -40,11 +40,11 @@ INSTALLED_APPS = [
     # external apps
     'django.contrib.humanize',
 
-    'home.apps.HomeConfig',
-    'accounts.apps.AccountsConfig',
-    'booking.apps.BookingConfig',
-    'contact.apps.ContactConfig',
-    'travelpackages.apps.TravelpackagesConfig',
+    'apps.home.apps.HomeConfig',
+    'apps.accounts.apps.AccountsConfig',
+    'apps.booking.apps.BookingConfig',
+    'apps.contact.apps.ContactConfig',
+    'apps.travelpackages.apps.TravelpackagesConfig',
 
     # 'packages.apps.PackagesConfig',
 

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class TravelpackagesConfig(AppConfig):
+class ContactConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'travelpackages'
+    name = 'apps.contact'

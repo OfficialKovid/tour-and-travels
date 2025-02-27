@@ -2,7 +2,7 @@
 
 import django.db.models.deletion
 import django.utils.timezone
-import travelpackages.models
+import apps.travelpackages.models
 from django.db import migrations, models
 
 
@@ -36,11 +36,11 @@ class Migration(migrations.Migration):
                 ('duration', models.IntegerField(help_text='Duration of the trip in days')),
                 ('number_of_people', models.IntegerField(help_text='Recommended number of people')),
                 ('highlights', models.TextField(blank=True, help_text="Key highlights of the package (e.g., 'River Cam / University Colleges')")),
-                ('rating', models.FloatField(default=travelpackages.models.get_random_rating, help_text='Average rating of the package')),
-                ('reviews_count', models.PositiveIntegerField(default=travelpackages.models.get_random_reviews, help_text='Number of reviews')),
+                ('rating', models.FloatField(default=apps.travelpackages.models.get_random_rating, help_text='Average rating of the package')),
+                ('reviews_count', models.PositiveIntegerField(default=apps.travelpackages.models.get_random_reviews, help_text='Number of reviews')),
                 ('price', models.DecimalField(decimal_places=2, help_text='Price of the package', max_digits=10)),
                 ('available_start_date', models.DateField(blank=True, default=django.utils.timezone.now, null=True)),
-                ('available_end_date', models.DateField(blank=True, default=travelpackages.models.get_default_end_date, null=True)),
+                ('available_end_date', models.DateField(blank=True, default=apps.travelpackages.models.get_default_end_date, null=True)),
                 ('booking_deadline', models.IntegerField(blank=True, default=7, help_text='Days before departure needed to book', null=True)),
                 ('amenities', models.JSONField(blank=True, default=dict, help_text='List of amenities included', null=True)),
                 ('itinerary', models.JSONField(blank=True, default=dict, help_text='Day-wise itinerary details', null=True)),
